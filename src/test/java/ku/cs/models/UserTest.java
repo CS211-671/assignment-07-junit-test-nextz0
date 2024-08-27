@@ -23,4 +23,24 @@ class UserTest {
         boolean actual = user.validatePassword("plain-p@ssw0rd");
         assertTrue(actual);
     }
+
+    @Test
+    @DisplayName("testusername")
+    public void TestIsUsername(){
+        User users = new User("next");
+        assertEquals("next",users.getUsername());
+    }
+
+    @Test
+    @DisplayName("testsetpassword")
+    public void TestSetPassword(){
+        User users = new User("next");
+        users.setPassword("1111");
+        assertNotNull(users.getPassword());
+        assertEquals("1111", users.getPassword());
+    }
+
+
+
+
 }
